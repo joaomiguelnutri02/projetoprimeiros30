@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="pt-BR" class="h-full">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projeto Primeiros 30 - Transforme sua Alimentação em 30 Dias</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="/_sdk/element_sdk.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;family=Open+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <script>
+<html lang="pt-BR" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Primeiros 30 | Transforme sua Alimentação</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -25,1024 +25,122 @@
                             'accent': '#22c55e',
                             'accent-hover': '#16a34a',
                             'orange': '#f97316',
-                            'orange-hover': '#ea580c',
                         }
                     }
                 }
             }
         }
     </script>
-  <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
-        }
-        
-        .main-wrapper {
-            width: 100%;
-            min-height: 100%;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-        }
-        
+
+    <style>
         .gradient-text {
             background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
-        
         .hero-gradient {
-            background: linear-gradient(180deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+            background: radial-gradient(circle at top right, #111, #0a0a0a);
         }
-        
-        .glow-green {
-            box-shadow: 0 0 40px rgba(34, 197, 94, 0.3);
-        }
-        
-        .glow-orange {
-            box-shadow: 0 0 40px rgba(249, 115, 22, 0.3);
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-        
-        .pulse-animation {
-            animation: pulse 2s infinite;
-        }
-        
+        .pulse-animation { animation: pulse 2s infinite; }
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.02); }
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(34, 197, 94, 0.6); }
         }
-        
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.3), transparent);
-        }
-        
-        .check-icon {
-            color: #22c55e;
-        }
-        
-        .x-icon {
-            color: #ef4444;
-        }
-        
-        .faq-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        
-        .testimonial-card {
-            background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .countdown-box {
-            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
-            border: 1px solid rgba(249, 115, 22, 0.3);
-        }
-        
-        .sticky-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 50;
-            background: linear-gradient(180deg, transparent, #0a0a0a 30%);
-            padding: 20px;
-            display: none;
-        }
-        
-        @media (max-width: 768px) {
-            .sticky-cta {
-                display: block;
-            }
-        }
-        
-        .badge {
-            background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
-        }
-        
-        .guarantee-badge {
-            background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
-        }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
-  <style>body { box-sizing: border-box; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
- </head>
- <body class="h-full">
-  <div class="main-wrapper bg-brand-dark">
-   <!-- ========== HERO SECTION ========== -->
-   <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
-    <!-- Background Elements -->
-    <div class="absolute inset-0 overflow-hidden">
-     <div class="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full filter blur-[150px] opacity-10"></div>
-     <div class="absolute bottom-20 right-10 w-96 h-96 bg-orange-500 rounded-full filter blur-[150px] opacity-10"></div>
+</head>
+
+<body class="bg-brand-dark text-white font-body">
+
+    <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden px-4">
+        <div class="container mx-auto max-w-6xl grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <span class="bg-brand-orange text-white text-xs font-bold px-4 py-2 rounded-full uppercase mb-6 inline-block">🔥 Vagas Limitadas</span>
+                <h1 class="text-5xl md:text-7xl font-black font-heading leading-tight mb-6">
+                    <span class="gradient-text">Projeto</span><br>Primeiros 30
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    O desafio de <strong class="text-white">30 dias</strong> que vai transformar sua relação com a comida e dar o pontapé inicial no seu emagrecimento.
+                </p>
+                <a href="#oferta" class="pulse-animation inline-block bg-brand-accent hover:bg-brand-accent-hover text-white text-xl font-bold py-5 px-10 rounded-2xl transition-all">
+                    QUERO COMEÇAR AGORA →
+                </a>
+            </div>
+            <div class="hidden md:block relative">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800" alt="Prato Saudável" class="rounded-3xl border border-gray-800 shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-darker">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12">Você já se sentiu <span class="gradient-text">assim</span>?</h2>
+            <div class="grid md:grid-cols-2 gap-6 text-left">
+                <div class="bg-brand-card p-6 rounded-xl border border-gray-800 card-hover">
+                    <p class="text-gray-300">😞 Já tentou várias dietas, mas <strong class="text-white">sempre desiste</strong> no meio?</p>
+                </div>
+                <div class="bg-brand-card p-6 rounded-xl border border-gray-800 card-hover">
+                    <p class="text-gray-300">🤯 Não sabe por onde começar quando o assunto é comer bem?</p>
+                </div>
+                <div class="bg-brand-card p-6 rounded-xl border border-gray-800 card-hover">
+                    <p class="text-gray-300">🍕 Come por ansiedade e tem uma relação complicada com a comida?</p>
+                </div>
+                <div class="bg-brand-card p-6 rounded-xl border border-gray-800 card-hover">
+                    <p class="text-gray-300">⏰ Acha que não tem tempo para cozinhar ou se cuidar?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-dark">
+        <div class="container mx-auto px-4 max-w-6xl text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16">O que está <span class="gradient-text">incluso</span>:</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800">
+                    <div class="text-4xl mb-4 text-brand-accent">🥗</div>
+                    <h3 class="text-xl font-bold mb-4">Plano Alimentar</h3>
+                    <p class="text-gray-400">Cardápios fáceis, práticos e com comida de verdade.</p>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800">
+                    <div class="text-4xl mb-4 text-brand-accent">📱</div>
+                    <h3 class="text-xl font-bold mb-4">Suporte VIP</h3>
+                    <p class="text-gray-400">Acompanhamento diário para tirar dúvidas e te motivar.</p>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800">
+                    <div class="text-4xl mb-4 text-brand-accent">🏆</div>
+                    <h3 class="text-xl font-bold mb-4">Comunidade</h3>
+                    <p class="text-gray-400">Grupo exclusivo com outras pessoas no mesmo objetivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="oferta" class="py-24 bg-brand-darker border-t border-brand-accent/20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-6xl font-black mb-12">Sua transformação custa menos que uma <span class="text-brand-orange">pizza</span>.</h2>
+            <div class="max-w-md mx-auto bg-brand-card border-2 border-brand-accent rounded-3xl p-10 shadow-2xl relative">
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-brand-accent px-6 py-2 rounded-full font-bold">OFERTA DE LANÇAMENTO</div>
+                <p class="text-gray-500 line-through text-xl mt-4">De R$ 497,00</p>
+                <p class="text-gray-400 text-lg">Por apenas 12x de</p>
+                <p class="text-6xl font-black text-white mb-6">R$ 29,70</p>
+                <p class="text-gray-400 mb-8">ou R$ 297,00 à vista</p>
+                <button class="w-full bg-brand-accent hover:bg-brand-accent-hover py-5 rounded-xl font-black text-xl transition-all scale-100 hover:scale-105">
+                    QUERO MEU ACESSO AGORA
+                </button>
+                <p class="text-xs text-gray-500 mt-6">🔒 Compra segura • Acesso imediato • 7 dias de garantia</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-brand-dark text-center border-t border-gray-900">
+        <p class="text-gray-500 text-sm">© 2026 Projeto Primeiros 30 - Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-black/80 backdrop-blur-md z-50">
+        <a href="#oferta" class="block w-full bg-brand-accent text-center py-4 rounded-xl font-bold text-white">
+            QUERO COMEÇAR AGORA
+        </a>
     </div>
-    <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
-     <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-       <!-- Left Content -->
-       <div class="fade-in">
-        <span class="badge text-white text-sm font-semibold px-4 py-2 rounded-full inline-block mb-6"> 🔥 VAGAS LIMITADAS </span>
-        <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6"><span class="gradient-text">Projeto</span><br><span class="text-white">Primeiros 30</span></h1>
-        <p id="hero-subtitle" class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">O desafio de <strong class="text-white">30 dias</strong> que vai transformar sua relação com a comida e dar o pontapé inicial na sua jornada de emagrecimento saudável.</p><!-- Benefits Bullets -->
-        <div class="space-y-4 mb-10">
-         <div class="flex items-center gap-3">
-          <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
-           <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-           </svg>
-          </div><span class="text-gray-200">Plano alimentar personalizado e flexível</span>
-         </div>
-         <div class="flex items-center gap-3">
-          <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
-           <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-           </svg>
-          </div><span class="text-gray-200">Acompanhamento periódico com nutricionista</span>
-         </div>
-         <div class="flex items-center gap-3">
-          <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
-           <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-           </svg>
-          </div><span class="text-gray-200">Comunidade de apoio exclusiva</span>
-         </div>
-        </div><!-- CTA Button --> <a href="#oferta" class="cta-button inline-block bg-brand-accent hover:bg-brand-accent-hover text-white text-lg md:text-xl font-bold py-5 px-10 rounded-xl transition-all duration-300 glow-green pulse-animation"> QUERO COMEÇAR AGORA → </a>
-        <p class="text-sm text-gray-400 mt-4">
-         <svg class="w-4 h-4 inline mr-1" fill="currentColor" viewbox="0 0 20 20">
-          <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
-         </svg> Compra 100% segura • Garantia de 7 dias</p>
-       </div><!-- Right Content - Image Area -->
-       <div class="relative floating hidden md:block">
-        <div class="relative">
-         <!-- Decorative Circle -->
-         <div class="absolute inset-0 bg-gradient-to-br from-green-500/20 to-orange-500/20 rounded-full blur-3xl"></div><!-- Image Placeholder with SVG -->
-         <div class="relative bg-gradient-to-br from-brand-card to-gray-800 rounded-3xl p-8 border border-gray-700">
-          <svg class="w-full h-auto" viewbox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg">
-           <!-- Plate --> <ellipse cx="200" cy="200" rx="150" ry="120" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="2" /> <ellipse cx="200" cy="195" rx="130" ry="100" fill="#1a1a1a" /> <!-- Salad/Food Elements --> <ellipse cx="160" cy="180" rx="40" ry="30" fill="#22c55e" opacity="0.9" /> <ellipse cx="230" cy="170" rx="35" ry="25" fill="#4ade80" opacity="0.8" /> <ellipse cx="200" cy="200" rx="45" ry="35" fill="#f97316" opacity="0.9" /> <ellipse cx="180" cy="210" rx="30" ry="20" fill="#fb923c" opacity="0.8" /> <ellipse cx="240" cy="205" rx="25" ry="18" fill="#84cc16" opacity="0.9" /> <!-- Protein/Chicken --> <path d="M170 160 Q200 140 230 165 Q240 190 210 210 Q180 215 165 190 Z" fill="#d4a574" opacity="0.9" /> <!-- Fork --> <rect x="80" y="100" width="6" height="120" rx="3" fill="#6b7280" /> <rect x="73" y="95" width="4" height="30" rx="2" fill="#6b7280" /> <rect x="80" y="95" width="4" height="30" rx="2" fill="#6b7280" /> <rect x="87" y="95" width="4" height="30" rx="2" fill="#6b7280" /> <!-- Knife --> <rect x="310" y="100" width="6" height="120" rx="3" fill="#6b7280" /> <path d="M310 95 L316 95 L318 70 L312 70 Z" fill="#9ca3af" /> <!-- "30 DIAS" Badge --> <rect x="130" y="40" width="140" height="50" rx="25" fill="url(#greenGradient)" /> <text x="200" y="72" text-anchor="middle" fill="white" font-family="Montserrat, sans-serif" font-size="20" font-weight="bold">
-            30 DIAS
-           </text> <!-- Gradient Definitions --> <defs>
-            <lineargradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-             <stop offset="0%" style="stop-color:#22c55e" />
-             <stop offset="100%" style="stop-color:#16a34a" />
-            </lineargradient>
-           </defs>
-          </svg><!-- Stats -->
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div><!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-     <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-     </svg>
-    </div>
-   </section><!-- ========== SEÇÃO DE IDENTIFICAÇÃO ========== -->
-   <section class="py-20 md:py-28 bg-brand-darker">
-    <div class="container mx-auto px-4">
-     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">Você já se sentiu <span class="gradient-text">assim</span>?</h2>
-      <p class="text-xl text-gray-300 mb-12">Se você se identifica com alguma dessas situações, saiba que você não está sozinho(a)...</p>
-      <div class="grid md:grid-cols-2 gap-6 text-left">
-       <div class="bg-brand-card p-6 rounded-xl border border-gray-800 card-hover">
-        <div class="flex items-start gap-4">
-         <span class="text-2xl">😞</span>
-         <p class="text-gray-300">Já tentou várias dietas, mas <strong class="text-white">sempre desiste</strong> no meio do caminho?</p>
-        </div>
-       </div>
-       <div class="bg-brand-card p-6 rounded-xl border border-gray-800 card-hover">
-        <div class="flex items-start gap-4">
-         <span class="text-2xl">🤯</span>
-         <p class="text-gray-300">Sente que <strong class="text-white">não sabe por onde começar</strong> quando o assunto é alimentação saudável?</p>
-        </div>
-       </div>
-       <div class="bg-brand-card p-6 rounded-xl border border-gray-800 card-hover">
-        <div class="flex items-start gap-4">
-         <span class="text-2xl">⏰</span>
-         <p class="text-gray-300">Vive uma rotina corrida e acha que <strong class="text-white">não tem tempo</strong> para cuidar da alimentação?</p>
-        </div>
-       </div>
-       <div class="bg-brand-card p-6 rounded-xl border border-gray-800 card-hover">
-        <div class="flex items-start gap-4">
-         <span class="text-2xl">😔</span>
-         <p class="text-gray-300">Está <strong class="text-white">desmotivado(a)</strong> porque os resultados nunca aparecem?</p>
-        </div>
-       </div>
-       <div class="bg-brand-card p-6 rounded-xl border border-gray-800 card-hover">
-        <div class="flex items-start gap-4">
-         <span class="text-2xl">🍕</span>
-         <p class="text-gray-300">Tem uma <strong class="text-white">relação complicada</strong> com a comida e come por ansiedade?</p>
-        </div>
-       </div>
-       <div class="bg-brand-card p-6 rounded-xl border border-gray-800 card-hover">
-        <div class="flex items-start gap-4">
-         <span class="text-2xl">🙍</span>
-         <p class="text-gray-300">Sente que precisa de <strong class="text-white">ajuda profissional</strong>, mas acha que é caro demais?</p>
-        </div>
-       </div>
-      </div>
-      <div class="mt-12 p-8 bg-gradient-to-r from-green-900/30 to-green-800/30 rounded-2xl border border-green-700/30">
-       <p class="text-xl md:text-2xl font-semibold text-white">💚 O <span class="gradient-text">Projeto Primeiros 30</span> foi criado exatamente para você!</p>
-      </div>
-     </div>
-    </div>
-   </section>
-   <div class="section-divider"></div><!-- ========== APRESENTAÇÃO DO PROGRAMA ========== -->
-   <section class="py-20 md:py-28 bg-brand-dark">
-    <div class="container mx-auto px-4">
-     <div class="max-w-4xl mx-auto text-center">
-      <span class="text-brand-accent font-semibold text-sm uppercase tracking-wider">O Programa</span>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-8">O que é o <span class="gradient-text">Projeto Primeiros 30</span>?</h2>
-      <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">É um <strong class="text-white">desafio de transformação de 30 dias</strong> onde você vai aprender a se alimentar de forma saudável, prática e sem sofrimento.</p>
-      <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">Diferente das dietas restritivas que você já tentou, aqui você vai desenvolver <strong class="text-white">hábitos sustentáveis</strong> que vão mudar sua vida para sempre.</p>
-      <div class="grid md:grid-cols-3 gap-8 mt-12">
-       <div class="text-center">
-        <div class="w-20 h-20 mx-auto bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-4">
-         <span class="text-4xl">🥗</span>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Alimentação Real</h3>
-        <p class="text-gray-400">Comida de verdade, sem frescura e sem alimentos mirabolantes</p>
-       </div>
-       <div class="text-center">
-        <div class="w-20 h-20 mx-auto bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4">
-         <span class="text-4xl">📱</span>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Acompanhamento</h3>
-        <p class="text-gray-400">Suporte diário para você não desistir no meio do caminho</p>
-       </div>
-       <div class="text-center">
-        <div class="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
-         <span class="text-4xl">🎯</span>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Resultados Reais</h3>
-        <p class="text-gray-400">Mudanças visíveis já nos primeiros 30 dias</p>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- ========== COMO FUNCIONA ========== -->
-   <section class="py-20 md:py-28 bg-brand-darker">
-    <div class="container mx-auto px-4">
-     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-       <span class="text-brand-orange font-semibold text-sm uppercase tracking-wider">Metodologia</span>
-       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-4">Como <span class="gradient-text">funciona</span>?</h2>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-       <!-- Card 1 -->
-       <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 card-hover">
-        <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6">
-         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-         </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Plano Alimentar Personalizado</h3>
-        <p class="text-gray-400">Receba um plano alimentar adaptado à sua rotina, preferências e objetivos. Nada de dietas genéricas!</p>
-       </div><!-- Card 2 -->
-       <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 card-hover">
-        <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-         </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Acompanhamento Diário</h3>
-        <p class="text-gray-400">Contato direto com o nutricionista para tirar dúvidas, ajustar o plano e manter você motivado(a).</p>
-       </div><!-- Card 3 -->
-       <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 card-hover">
-        <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-         </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Registro via WebDiet</h3>
-        <p class="text-gray-400">Use o aplicativo WebDiet para registrar suas refeições e o nutricionista acompanha em tempo real.</p>
-       </div><!-- Card 4 -->
-       <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 card-hover">
-        <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-         </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Comunidade Exclusiva</h3>
-        <p class="text-gray-400">Faça parte de um grupo de pessoas com o mesmo objetivo. Troque experiências e se motive junto!</p>
-       </div><!-- Card 5 -->
-       <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 card-hover">
-        <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
-         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-         </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Gamificação do Processo</h3>
-        <p class="text-gray-400">Competição saudável que premia os alunos mais empenhados. Cumpra desafios, ganhe pontos e celebre conquistas!</p>
-       </div><!-- Card 6 -->
-       <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 card-hover">
-        <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center mb-6">
-         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-         </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Evolução Visível</h3>
-        <p class="text-gray-400">Acompanhe sua evolução com métricas claras e veja seus resultados semana a semana.</p>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- ========== O QUE VOCÊ PODE CONQUISTAR ========== -->
-   <section class="py-20 md:py-28 bg-brand-dark">
-    <div class="container mx-auto px-4">
-     <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-16">
-       <span class="text-brand-accent font-semibold text-sm uppercase tracking-wider">Resultados</span>
-       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-4">O que você pode <span class="gradient-text">conquistar</span> em 30 dias?</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6">
-       <div class="flex items-start gap-4 p-5 bg-brand-card rounded-xl border border-gray-800">
-        <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-         <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-gray-200">Perder os primeiros quilos de forma saudável</span>
-       </div>
-       <div class="flex items-start gap-4 p-5 bg-brand-card rounded-xl border border-gray-800">
-        <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-         <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-gray-200">Reduzir o inchaço e a retenção de líquidos</span>
-       </div>
-       <div class="flex items-start gap-4 p-5 bg-brand-card rounded-xl border border-gray-800">
-        <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-         <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-gray-200">Ter mais energia e disposição no dia a dia</span>
-       </div>
-       <div class="flex items-start gap-4 p-5 bg-brand-card rounded-xl border border-gray-800">
-        <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-         <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-gray-200">Melhorar a qualidade do sono</span>
-       </div>
-       <div class="flex items-start gap-4 p-5 bg-brand-card rounded-xl border border-gray-800">
-        <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-         <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-gray-200">Diminuir a compulsão alimentar</span>
-       </div>
-       <div class="flex items-start gap-4 p-5 bg-brand-card rounded-xl border border-gray-800">
-        <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-         <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-gray-200">Criar uma rotina alimentar organizada</span>
-       </div>
-       <div class="flex items-start gap-4 p-5 bg-brand-card rounded-xl border border-gray-800">
-        <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-         <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-gray-200">Aprender a fazer escolhas mais saudáveis</span>
-       </div>
-       <div class="flex items-start gap-4 p-5 bg-brand-card rounded-xl border border-gray-800">
-        <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-         <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-         </svg>
-        </div><span class="text-gray-200">Aumentar sua autoestima e confiança</span>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- ========== PARA QUEM É / NÃO É ========== -->
-   <section class="py-20 md:py-28 bg-brand-darker">
-    <div class="container mx-auto px-4">
-     <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-8">
-       <!-- Para quem É -->
-       <div class="bg-gradient-to-br from-green-900/20 to-green-800/10 p-8 md:p-10 rounded-2xl border border-green-700/30">
-        <div class="flex items-center gap-3 mb-8">
-         <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-         </div>
-         <h3 class="text-2xl font-bold">Para quem É</h3>
-        </div>
-        <div class="space-y-4">
-         <div class="flex items-start gap-3">
-          <span class="text-green-500 text-xl">✓</span> <span class="text-gray-300">Quem quer emagrecer de forma saudável e definitiva</span>
-         </div>
-         <div class="flex items-start gap-3">
-          <span class="text-green-500 text-xl">✓</span> <span class="text-gray-300">Quem precisa de organização e planejamento alimentar</span>
-         </div>
-         <div class="flex items-start gap-3">
-          <span class="text-green-500 text-xl">✓</span> <span class="text-gray-300">Quem busca acompanhamento profissional acessível</span>
-         </div>
-         <div class="flex items-start gap-3">
-          <span class="text-green-500 text-xl">✓</span> <span class="text-gray-300">Quem está disposto a dedicar 30 dias à sua transformação</span>
-         </div>
-         <div class="flex items-start gap-3">
-          <span class="text-green-500 text-xl">✓</span> <span class="text-gray-300">Quem quer aprender a comer melhor, sem passar fome</span>
-         </div>
-         <div class="flex items-start gap-3">
-          <span class="text-green-500 text-xl">✓</span> <span class="text-gray-300">Quem precisa de motivação e apoio durante o processo</span>
-         </div>
-        </div>
-       </div><!-- Para quem NÃO é -->
-       <div class="bg-gradient-to-br from-red-900/20 to-red-800/10 p-8 md:p-10 rounded-2xl border border-red-700/30">
-        <div class="flex items-center gap-3 mb-8">
-         <div class="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-         </div>
-         <h3 class="text-2xl font-bold">Para quem NÃO é</h3>
-        </div>
-        <div class="space-y-4">
-         <div class="flex items-start gap-3">
-          <span class="text-red-500 text-xl">✗</span> <span class="text-gray-300">Quem procura soluções mágicas e resultados da noite pro dia</span>
-         </div>
-         <div class="flex items-start gap-3">
-          <span class="text-red-500 text-xl">✗</span> <span class="text-gray-300">Atletas ou pessoas com um estilo de vida saudável há muito tempo</span>
-         </div>
-         <div class="flex items-start gap-3">
-          <span class="text-red-500 text-xl">✗</span> <span class="text-gray-300">Quem quer dietas extremamente restritivas</span>
-         </div>
-         <div class="flex items-start gap-3">
-          <span class="text-red-500 text-xl">✗</span> <span class="text-gray-300">Quem não vai se comprometer com o acompanhamento</span>
-         </div>
-         <div class="flex items-start gap-3">
-          <span class="text-red-500 text-xl">✗</span> <span class="text-gray-300">Quem espera perder 20kg em 30 dias</span>
-         </div>
-         <div class="flex items-start gap-3">
-          <span class="text-red-500 text-xl">✗</span> <span class="text-gray-300">Quem não está pronto para investir em sua saúde</span>
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- ========== SOBRE O NUTRICIONISTA ========== -->
-   <section class="py-20 md:py-28 bg-brand-dark">
-    <div class="container mx-auto px-4">
-     <div class="max-w-5xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-       <!-- Photo -->
-       <div class="relative">
-        <div class="absolute inset-0 bg-gradient-to-br from-green-500/30 to-orange-500/30 rounded-3xl blur-3xl"></div>
-        <div class="relative bg-brand-card rounded-3xl overflow-hidden border border-gray-700">
-         <!-- Photo Placeholder -->
-         <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
-          <svg class="w-48 h-48 text-gray-600" viewbox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-           <!-- Head --> <circle cx="100" cy="70" r="40" fill="currentColor" /> <!-- Body --> <path d="M40 200 Q40 140 100 130 Q160 140 160 200" fill="currentColor" /> <!-- Stethoscope hint --> <circle cx="100" cy="150" r="15" stroke="#22c55e" stroke-width="3" fill="none" /> <path d="M85 150 L85 180" stroke="#22c55e" stroke-width="3" />
-          </svg>
-         </div><!-- Badge -->
-         <div class="absolute bottom-4 left-4 bg-brand-accent text-white px-4 py-2 rounded-xl font-bold text-sm">
-          CRN 12345
-         </div>
-        </div>
-       </div><!-- Content -->
-       <div>
-        <span class="text-brand-accent font-semibold text-sm uppercase tracking-wider">Quem vai te guiar</span>
-        <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">Olá, eu sou o <span id="nutritionist-name" class="gradient-text">João Miguel</span></h2>
-        <div class="space-y-4 text-gray-300">
-         <p>Sou nutricionista e já ajudei muitas pessoas a transformarem sua relação com a comida.</p>
-         <p>Sei como é frustrante tentar várias dietas e não conseguir resultados duradouros. Por isso, criei o <strong class="text-white">Projeto Primeiros 30</strong>: um método simples, prático e humanizado.</p>
-         <p>Meu objetivo não é te dar uma dieta milagrosa, mas sim te <strong class="text-white">ensinar a comer bem para o resto da vida</strong>.</p>
-        </div>
-        <div class="flex items-center justify-center mt-8">
-         <div class="text-center">
-          <div class="text-3xl font-bold text-brand-accent">
-           98%
-          </div>
-          <div class="text-sm text-gray-400">
-           Satisfação
-          </div>
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- ========== BÔNUS ========== -->
-   <section class="py-20 md:py-28 bg-brand-darker">
-    <div class="container mx-auto px-4">
-     <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16">
-       <span class="badge text-white text-sm font-semibold px-4 py-2 rounded-full inline-block mb-4"> 🎁 EXCLUSIVO </span>
-       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold">Bônus <span class="gradient-text">Especiais</span></h2>
-       <p class="text-gray-400 mt-4 text-lg">Ao se inscrever agora, você também recebe:</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-       <!-- Bônus 1 -->
-       <div class="relative bg-brand-card p-8 rounded-2xl border border-orange-500/30 card-hover">
-        <div class="absolute -top-4 -right-4 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full">
-         GRÁTIS
-        </div>
-        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
-         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-         </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Checklist de Compras Saudáveis</h3>
-        <p class="text-gray-400 text-sm mb-4">Lista completa do que comprar no mercado para nunca mais ficar perdido(a) nas compras.</p>
-        <div class="text-sm text-gray-500 line-through">
-         De R$ 27,00
-        </div>
-        <div class="text-brand-orange font-bold">
-         GRÁTIS
-        </div>
-       </div><!-- Bônus 2 -->
-       <div class="relative bg-brand-card p-8 rounded-2xl border border-orange-500/30 card-hover">
-        <div class="absolute -top-4 -right-4 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full">
-         GRÁTIS
-        </div>
-        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
-         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-         </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Guia de Montagem de Pratos</h3>
-        <p class="text-gray-400 text-sm mb-4">Aprenda a montar pratos equilibrados e saborosos em poucos minutos, com proporções ideais.</p>
-        <div class="text-sm text-gray-500 line-through">
-         De R$ 37,00
-        </div>
-        <div class="text-brand-orange font-bold">
-         GRÁTIS
-        </div>
-       </div><!-- Bônus 3 -->
-       <div class="relative bg-brand-card p-8 rounded-2xl border border-orange-500/30 card-hover">
-        <div class="absolute -top-4 -right-4 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full">
-         GRÁTIS
-        </div>
-        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
-         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-         </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Guia de Lanches Rápidos</h3>
-        <p class="text-gray-400 text-sm mb-4">20 opções de lanches saudáveis para quem tem rotina corrida e pouco tempo.</p>
-        <div class="text-sm text-gray-500 line-through">
-         De R$ 19,00
-        </div>
-        <div class="text-brand-orange font-bold">
-         GRÁTIS
-        </div>
-       </div>
-      </div>
-      <div class="text-center mt-12">
-       <p class="text-gray-400">Valor total dos bônus: <span class="line-through">R$ 83,00</span> — <span class="text-brand-accent font-bold">Você leva GRÁTIS!</span></p>
-      </div>
-     </div>
-    </div>
-   </section><!-- ========== OFERTA / PREÇO ========== -->
-   <section id="oferta" class="py-20 md:py-28 bg-brand-dark relative overflow-hidden">
-    <!-- Background Effects -->
-    <div class="absolute inset-0">
-     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-green-500 rounded-full filter blur-[200px] opacity-10"></div>
-    </div>
-    <div class="container mx-auto px-4 relative z-10">
-     <div class="max-w-3xl mx-auto">
-      <div class="bg-gradient-to-br from-brand-card to-gray-900 rounded-3xl p-8 md:p-12 border border-green-500/30 glow-green">
-       <div class="text-center">
-        <span class="badge text-white text-sm font-semibold px-4 py-2 rounded-full inline-block mb-6"> 🔥 OFERTA ESPECIAL DE LANÇAMENTO </span>
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Tudo isso por apenas:</h2>
-        <div class="mb-8">
-         <div class="text-gray-400 text-lg line-through mb-2">
-          De R$ 297,00
-         </div>
-         <div class="flex items-center justify-center gap-2">
-          <span class="text-2xl text-gray-400">por</span> <span id="price-display" class="text-5xl md:text-7xl font-black gradient-text">R$ 98,99</span>
-         </div>
-         <p class="text-gray-400 mt-2">ou em até 12x de R$ 9,88</p>
-        </div><!-- O que está incluso -->
-        <div class="bg-black/30 rounded-2xl p-6 mb-8 text-left">
-         <h4 class="font-bold mb-4 text-center">O que está incluso:</h4>
-         <div class="space-y-3">
-          <div class="flex items-center gap-3">
-           <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-           </svg><span class="text-gray-300">Plano alimentar personalizado</span>
-          </div>
-          <div class="flex items-center gap-3">
-           <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-           </svg><span class="text-gray-300">30 dias de acompanhamento</span>
-          </div>
-          <div class="flex items-center gap-3">
-           <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-           </svg><span class="text-gray-300">Acesso ao WebDiet</span>
-          </div>
-          <div class="flex items-center gap-3">
-           <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-           </svg><span class="text-gray-300">Desafio Gymrats</span>
-          </div>
-          <div class="flex items-center gap-3">
-           <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-           </svg><span class="text-gray-300">Comunidade exclusiva</span>
-          </div>
-          <div class="flex items-center gap-3">
-           <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-           </svg><span class="text-orange-400">+ 3 Bônus Exclusivos (R$ 83 de valor)</span>
-          </div>
-         </div>
-        </div><!-- CTA --> <a href="#" class="cta-button block w-full bg-brand-accent hover:bg-brand-accent-hover text-white text-xl font-bold py-5 px-8 rounded-xl transition-all duration-300 pulse-animation mb-6"> QUERO COMEÇAR MINHA TRANSFORMAÇÃO → </a>
-        <div class="flex items-center justify-center gap-4 text-sm text-gray-400">
-         <div class="flex items-center gap-1">
-          <svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20">
-           <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
-          </svg><span>Compra segura</span>
-         </div>
-         <div class="flex items-center gap-1">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-          </svg><span>Garantia de 7 dias</span>
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- ========== ESCASSEZ ========== -->
-   <section class="py-16 bg-gradient-to-r from-orange-900/30 to-red-900/30 border-y border-orange-500/30">
-    <div class="container mx-auto px-4">
-     <div class="max-w-3xl mx-auto text-center">
-      <div class="flex items-center justify-center gap-3 mb-4">
-       <svg class="w-8 h-8 text-orange-500 animate-pulse" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-       </svg>
-       <h3 class="text-2xl md:text-3xl font-bold text-orange-400">ATENÇÃO: Vagas Limitadas!</h3>
-      </div>
-      <p class="text-gray-300 text-lg mb-6">Para garantir um acompanhamento de qualidade, abrimos apenas <strong class="text-white">poucas vagas</strong> por turma.</p>
-      <div class="inline-flex items-center gap-3 bg-black/40 px-8 py-4 rounded-2xl border border-orange-500/50">
-       <span class="text-xl text-gray-300">Restam apenas</span> <span id="spots-display" class="text-4xl font-black text-orange-500">7</span> <span class="text-xl text-gray-300">vagas</span>
-      </div>
-      <p class="text-sm text-gray-400 mt-4">⚡ As vagas estão se esgotando rapidamente</p>
-     </div>
-    </div>
-   </section><!-- ========== GARANTIA ========== -->
-   <section class="py-20 md:py-28 bg-brand-darker">
-    <div class="container mx-auto px-4">
-     <div class="max-w-3xl mx-auto">
-      <div class="bg-gradient-to-br from-green-900/20 to-green-800/10 rounded-3xl p-8 md:p-12 border border-green-500/30 text-center">
-       <div class="w-24 h-24 mx-auto bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-8">
-        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-       </div>
-       <h2 class="text-3xl md:text-4xl font-bold mb-6">Garantia <span class="gradient-text">Incondicional</span> de 7 Dias</h2>
-       <p class="text-lg text-gray-300 mb-6 leading-relaxed">Se por qualquer motivo você sentir que o <strong class="text-white">Projeto Primeiros 30</strong> não é para você, basta enviar um email em até 7 dias após a compra e devolvemos <strong class="text-white">100% do seu dinheiro</strong>.</p>
-       <p class="text-lg text-gray-300 leading-relaxed">Sem perguntas, sem burocracia. <strong class="text-white">O risco é todo nosso!</strong></p>
-       <div class="mt-8 flex items-center justify-center gap-2 text-green-400">
-        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20">
-         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-        </svg><span class="font-semibold">Sua satisfação é nossa prioridade</span>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- ========== FAQ ========== -->
-   <section class="py-20 md:py-28 bg-brand-dark">
-    <div class="container mx-auto px-4">
-     <div class="max-w-3xl mx-auto">
-      <div class="text-center mb-16">
-       <span class="text-brand-accent font-semibold text-sm uppercase tracking-wider">Dúvidas</span>
-       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-4">Perguntas <span class="gradient-text">Frequentes</span></h2>
-      </div>
-      <div class="space-y-4" id="faq-container">
-       <!-- FAQ Item 1 -->
-       <div class="faq-item bg-brand-card rounded-xl border border-gray-800 overflow-hidden">
-        <button class="faq-button w-full p-6 text-left flex items-center justify-between" onclick="toggleFaq(this)"> <span class="font-semibold text-lg">Por quanto tempo tenho acesso ao programa?</span>
-         <svg class="faq-icon w-6 h-6 transform transition-transform text-brand-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-         </svg></button>
-        <div class="faq-answer hidden px-6 pb-6">
-         <p class="text-gray-400">O programa tem duração de 30 dias, mas o conhecimento e os materiais de apoio são seus para sempre! Além disso, você pode revisitar as orientações quantas vezes precisar durante o período do desafio.</p>
-        </div>
-       </div><!-- FAQ Item 2 -->
-       <div class="faq-item bg-brand-card rounded-xl border border-gray-800 overflow-hidden">
-        <button class="faq-button w-full p-6 text-left flex items-center justify-between" onclick="toggleFaq(this)"> <span class="font-semibold text-lg">Preciso comprar suplementos ou alimentos especiais?</span>
-         <svg class="faq-icon w-6 h-6 transform transition-transform text-brand-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-         </svg></button>
-        <div class="faq-answer hidden px-6 pb-6">
-         <p class="text-gray-400">Não! O plano alimentar é baseado em comida de verdade, encontrada em qualquer mercado. Nada de suplementos caros ou alimentos exóticos. Nosso foco é praticidade e acessibilidade.</p>
-        </div>
-       </div><!-- FAQ Item 3 -->
-       <div class="faq-item bg-brand-card rounded-xl border border-gray-800 overflow-hidden">
-        <button class="faq-button w-full p-6 text-left flex items-center justify-between" onclick="toggleFaq(this)"> <span class="font-semibold text-lg">Funciona para quem tem restrições alimentares?</span>
-         <svg class="faq-icon w-6 h-6 transform transition-transform text-brand-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-         </svg></button>
-        <div class="faq-answer hidden px-6 pb-6">
-         <p class="text-gray-400">Sim! O plano é personalizado às suas necessidades. Seja você vegetariano, intolerante à lactose, ou com qualquer outra restrição, adaptamos tudo para você.</p>
-        </div>
-       </div><!-- FAQ Item 4 -->
-       <div class="faq-item bg-brand-card rounded-xl border border-gray-800 overflow-hidden">
-        <button class="faq-button w-full p-6 text-left flex items-center justify-between" onclick="toggleFaq(this)"> <span class="font-semibold text-lg">Quantos quilos vou perder em 30 dias?</span>
-         <svg class="faq-icon w-6 h-6 transform transition-transform text-brand-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-         </svg></button>
-        <div class="faq-answer hidden px-6 pb-6">
-         <p class="text-gray-400">Cada corpo é único e responde de forma diferente. Em média, nossos alunos perdem de 2 a 5kg no primeiro mês, mas o mais importante é a mudança de hábitos que você vai construir para resultados duradouros.</p>
-        </div>
-       </div><!-- FAQ Item 5 -->
-       <div class="faq-item bg-brand-card rounded-xl border border-gray-800 overflow-hidden">
-        <button class="faq-button w-full p-6 text-left flex items-center justify-between" onclick="toggleFaq(this)"> <span class="font-semibold text-lg">Como funciona o acompanhamento?</span>
-         <svg class="faq-icon w-6 h-6 transform transition-transform text-brand-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-         </svg></button>
-        <div class="faq-answer hidden px-6 pb-6">
-         <p class="text-gray-400">Você registra suas refeições no aplicativo WebDiet e eu acompanho em tempo real. Damos suporte via grupo exclusivo e você pode tirar dúvidas diretamente comigo durante todo o período.</p>
-        </div>
-       </div><!-- FAQ Item 6 -->
-       <div class="faq-item bg-brand-card rounded-xl border border-gray-800 overflow-hidden">
-        <button class="faq-button w-full p-6 text-left flex items-center justify-between" onclick="toggleFaq(this)"> <span class="font-semibold text-lg">Posso parcelar o pagamento?</span>
-         <svg class="faq-icon w-6 h-6 transform transition-transform text-brand-accent" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-         </svg></button>
-        <div class="faq-answer hidden px-6 pb-6">
-         <p class="text-gray-400">Sim! Você pode parcelar em até 12x no cartão de crédito. Também aceitamos PIX e boleto bancário (à vista).</p>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- ========== CTA FINAL ========== -->
-   <section class="py-20 md:py-28 bg-gradient-to-b from-brand-darker to-brand-dark relative overflow-hidden">
-    <!-- Background Effects -->
-    <div class="absolute inset-0">
-     <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-green-500 rounded-full filter blur-[200px] opacity-10"></div>
-     <div class="absolute top-0 right-1/4 w-96 h-96 bg-orange-500 rounded-full filter blur-[200px] opacity-10"></div>
-    </div>
-    <div class="container mx-auto px-4 relative z-10">
-     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Está pronto(a) para <span class="gradient-text">transformar</span> sua vida?</h2>
-      <p class="text-xl text-gray-300 mb-10 leading-relaxed">Os próximos 30 dias vão passar de qualquer forma. A diferença é se você vai estar mais perto dos seus objetivos ou no mesmo lugar de sempre.</p><a href="#oferta" class="cta-button inline-block bg-brand-accent hover:bg-brand-accent-hover text-white text-xl font-bold py-6 px-12 rounded-xl transition-all duration-300 glow-green pulse-animation mb-8"> QUERO COMEÇAR MINHA TRANSFORMAÇÃO → </a>
-      <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
-       <div class="flex items-center gap-2">
-        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20">
-         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-        </svg><span>Acesso imediato</span>
-       </div>
-       <div class="flex items-center gap-2">
-        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20">
-         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-        </svg><span>Pagamento seguro</span>
-       </div>
-       <div class="flex items-center gap-2">
-        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewbox="0 0 20 20">
-         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-        </svg><span>Garantia de 7 dias</span>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- ========== FOOTER ========== -->
-   <footer class="py-12 bg-black border-t border-gray-800">
-    <div class="container mx-auto px-4">
-     <div class="max-w-4xl mx-auto text-center">
-      <div class="mb-6">
-       <span class="text-2xl font-bold"> <span class="gradient-text">Projeto</span> Primeiros 30 </span>
-      </div>
-      <p class="text-gray-500 text-sm mb-6">Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.</p>
-      <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500 mb-6">
-       <a href="#" class="hover:text-white transition-colors">Termos de Uso</a> <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a> <a href="#" class="hover:text-white transition-colors">Contato</a>
-      </div>
-      <p class="text-gray-600 text-sm">© 2024 Projeto Primeiros 30. Todos os direitos reservados.</p>
-     </div>
-    </div>
-   </footer>
-  </div><!-- ========== STICKY CTA MOBILE ========== -->
-  <div class="sticky-cta">
-   <a href="#oferta" class="cta-button block w-full bg-brand-accent hover:bg-brand-accent-hover text-white text-center text-lg font-bold py-4 px-6 rounded-xl"> QUERO COMEÇAR AGORA → </a>
-  </div>
-  <script>
-        // Default configuration
-        const defaultConfig = {
-            hero_title: "Projeto Primeiros 30",
-            hero_subtitle: "O desafio de 30 dias que vai transformar sua relação com a comida e dar o pontapé inicial na sua jornada de emagrecimento saudável.",
-            price_value: "R$ 98,99",
-            spots_remaining: "7",
-            nutritionist_name: "João Miguel",
-            cta_button_text: "QUERO COMEÇAR AGORA",
-            background_color: "#0a0a0a",
-            card_color: "#1a1a1a",
-            text_color: "#ffffff",
-            accent_color: "#22c55e",
-            secondary_color: "#f97316",
-            font_family: "Montserrat",
-            font_size: 16
-        };
-        
-        // FAQ toggle function
-        function toggleFaq(button) {
-            const answer = button.nextElementSibling;
-            const icon = button.querySelector('.faq-icon');
-            
-            answer.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
-        }
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Initialize Element SDK
-        if (window.elementSdk) {
-            window.elementSdk.init({
-                defaultConfig: defaultConfig,
-                
-                onConfigChange: async (config) => {
-                    // Update hero title
-                    const heroTitle = document.getElementById('hero-title');
-                    if (heroTitle) {
-                        const title = config.hero_title || defaultConfig.hero_title;
-                        const words = title.split(' ');
-                        if (words.length > 1) {
-                            heroTitle.innerHTML = `<span class="gradient-text">${words[0]}</span><br><span class="text-white">${words.slice(1).join(' ')}</span>`;
-                        } else {
-                            heroTitle.innerHTML = `<span class="gradient-text">${title}</span>`;
-                        }
-                    }
-                    
-                    // Update hero subtitle
-                    const heroSubtitle = document.getElementById('hero-subtitle');
-                    if (heroSubtitle) {
-                        heroSubtitle.innerHTML = config.hero_subtitle || defaultConfig.hero_subtitle;
-                    }
-                    
-                    // Update price
-                    const priceDisplay = document.getElementById('price-display');
-                    if (priceDisplay) {
-                        priceDisplay.textContent = config.price_value || defaultConfig.price_value;
-                    }
-                    
-                    // Update spots remaining
-                    const spotsDisplay = document.getElementById('spots-display');
-                    if (spotsDisplay) {
-                        spotsDisplay.textContent = config.spots_remaining || defaultConfig.spots_remaining;
-                    }
-                    
-                    // Update nutritionist name
-                    const nutritionistName = document.getElementById('nutritionist-name');
-                    if (nutritionistName) {
-                        nutritionistName.textContent = config.nutritionist_name || defaultConfig.nutritionist_name;
-                    }
-                    
-                    // Update CTA buttons
-                    const ctaButtons = document.querySelectorAll('.cta-button');
-                    const ctaText = config.cta_button_text || defaultConfig.cta_button_text;
-                    ctaButtons.forEach(btn => {
-                        if (btn.textContent.includes('QUERO')) {
-                            btn.textContent = ctaText + ' →';
-                        }
-                    });
-                    
-                    // Update colors
-                    const accentColor = config.accent_color || defaultConfig.accent_color;
-                    const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
-                    const bgColor = config.background_color || defaultConfig.background_color;
-                    const cardColor = config.card_color || defaultConfig.card_color;
-                    const textColor = config.text_color || defaultConfig.text_color;
-                    
-                    document.body.style.backgroundColor = bgColor;
-                    document.body.style.color = textColor;
-                    
-                    // Update font family
-                    const fontFamily = config.font_family || defaultConfig.font_family;
-                    document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(el => {
-                        el.style.fontFamily = `${fontFamily}, sans-serif`;
-                    });
-                    
-                    // Update font size
-                    const fontSize = config.font_size || defaultConfig.font_size;
-                    document.body.style.fontSize = `${fontSize}px`;
-                },
-                
-                mapToCapabilities: (config) => ({
-                    recolorables: [
-                        {
-                            get: () => config.background_color || defaultConfig.background_color,
-                            set: (value) => {
-                                config.background_color = value;
-                                window.elementSdk.setConfig({ background_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.card_color || defaultConfig.card_color,
-                            set: (value) => {
-                                config.card_color = value;
-                                window.elementSdk.setConfig({ card_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.text_color || defaultConfig.text_color,
-                            set: (value) => {
-                                config.text_color = value;
-                                window.elementSdk.setConfig({ text_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.accent_color || defaultConfig.accent_color,
-                            set: (value) => {
-                                config.accent_color = value;
-                                window.elementSdk.setConfig({ accent_color: value });
-                            }
-                        },
-                        {
-                            get: () => config.secondary_color || defaultConfig.secondary_color,
-                            set: (value) => {
-                                config.secondary_color = value;
-                                window.elementSdk.setConfig({ secondary_color: value });
-                            }
-                        }
-                    ],
-                    borderables: [],
-                    fontEditable: {
-                        get: () => config.font_family || defaultConfig.font_family,
-                        set: (value) => {
-                            config.font_family = value;
-                            window.elementSdk.setConfig({ font_family: value });
-                        }
-                    },
-                    fontSizeable: {
-                        get: () => config.font_size || defaultConfig.font_size,
-                        set: (value) => {
-                            config.font_size = value;
-                            window.elementSdk.setConfig({ font_size: value });
-                        }
-                    }
-                }),
-                
-                mapToEditPanelValues: (config) => new Map([
-                    ["hero_title", config.hero_title || defaultConfig.hero_title],
-                    ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
-                    ["price_value", config.price_value || defaultConfig.price_value],
-                    ["spots_remaining", config.spots_remaining || defaultConfig.spots_remaining],
-                    ["nutritionist_name", config.nutritionist_name || defaultConfig.nutritionist_name],
-                    ["cta_button_text", config.cta_button_text || defaultConfig.cta_button_text]
-                ])
-            });
-        }
-    </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9db63c18d052f1b5',t:'MTc3MzM1NDUzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+</body>
 </html>
