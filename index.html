@@ -848,6 +848,69 @@
        <span class="text-xl text-gray-300">Restam apenas</span> <span id="spots-display" class="text-4xl font-black text-orange-500">7</span> <span class="text-xl text-gray-300">vagas</span>
       </div>
       <p class="text-sm text-gray-400 mt-4">⚡ As vagas estão se esgotando rapidamente</p>
+      <!-- CONTADOR INÍCIO DO DESAFIO -->
+<div class="mt-10 text-center">
+
+<p class="text-gray-300 text-lg mb-4">
+⏳ O próximo desafio começa em
+</p>
+
+<div class="flex justify-center gap-4 md:gap-8">
+
+<div class="countdown-box p-6 rounded-xl text-center transform transition-all duration-300 hover:scale-105">
+<div id="days" class="text-4xl md:text-5xl font-black text-brand-orange">00</div>
+<div class="text-sm text-gray-400 mt-1">Dias</div>
+</div>
+
+<div class="countdown-box p-6 rounded-xl text-center transform transition-all duration-300 hover:scale-105">
+<div id="hours" class="text-4xl md:text-5xl font-black text-brand-accent">00</div>
+<div class="text-sm text-gray-400 mt-1">Horas</div>
+</div>
+
+<div class="countdown-box p-6 rounded-xl text-center transform transition-all duration-300 hover:scale-105">
+<div id="minutes" class="text-4xl md:text-5xl font-black text-white">00</div>
+<div class="text-sm text-gray-400 mt-1">Minutos</div>
+</div>
+
+</div>
+
+<p class="text-sm text-gray-400 mt-4">
+🚀 Início do desafio: 01/06/2026
+</p>
+
+</div>
+
+
+<script>
+
+const launchDate = new Date("June 1, 2026 00:00:00").getTime();
+
+const countdown = setInterval(function() {
+
+const now = new Date().getTime();
+const distance = launchDate - now;
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+
+if (distance < 0) {
+
+clearInterval(countdown);
+
+document.getElementById("days").innerHTML = "00";
+document.getElementById("hours").innerHTML = "00";
+document.getElementById("minutes").innerHTML = "00";
+
+}
+
+}, 1000);
+
+</script>
      </div>
     </div>
    </section><!-- ========== GARANTIA ========== -->
