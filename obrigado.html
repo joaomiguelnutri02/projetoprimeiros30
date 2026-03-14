@@ -13,50 +13,45 @@ height: 100%;
 }
 
 body{
-background: linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
-color:#e5e5e5;
-font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+background: #0a0a0a;
+color: #e5e5e5;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 margin: 0;
 padding: 0;
 }
 
-.gradient-text{
-background: linear-gradient(90deg, #22c55e, #f97316);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
+.green-accent {
+color: #22c55e;
 }
 
-.gradient-bg{
-background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(249, 115, 22, 0.1) 100%);
-border: 1px solid rgba(34, 197, 94, 0.2);
+.orange-accent {
+color: #f97316;
 }
 
 .card{
-background: rgba(26, 26, 26, 0.8);
-border: 1px solid rgba(51, 51, 51, 0.6);
-backdrop-filter: blur(10px);
+background: #1a1a1a;
+border: 1px solid #333;
 transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover{
-transform: translateY(-8px);
-border-color: rgba(34, 197, 94, 0.4);
-box-shadow: 0 20px 60px rgba(34, 197, 94, 0.1), 0 0 40px rgba(34, 197, 94, 0.05);
+transform: translateY(-6px);
+border-color: #22c55e;
+box-shadow: 0 20px 40px rgba(34, 197, 94, 0.2);
 }
 
 .cta{
-background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+background: #22c55e;
 transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-color: white;
+color: #000;
 font-weight: 700;
 letter-spacing: 0.5px;
 }
 
 .cta:hover{
+background: #16a34a;
 transform: translateY(-2px);
-box-shadow: 0 15px 40px rgba(34, 197, 94, 0.4);
-background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
 }
 
 .cta:active{
@@ -64,49 +59,51 @@ transform: translateY(0);
 }
 
 .secondary-btn {
-background: rgba(107, 114, 128, 0.1);
-border: 1px solid rgba(107, 114, 128, 0.3);
+background: transparent;
+border: 1px solid #666;
 transition: all 0.3s;
-color: #9ca3af;
+color: #999;
 }
 
 .secondary-btn:hover {
-background: rgba(107, 114, 128, 0.2);
-border-color: rgba(107, 114, 128, 0.5);
-color: #e5e5e5;
+background: rgba(34, 197, 94, 0.1);
+border-color: #22c55e;
+color: #22c55e;
 }
 
 .check-icon {
-width: 24px;
-height: 24px;
-background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+width: 32px;
+height: 32px;
+background: #22c55e;
 border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
-color: white;
+color: #000;
 font-weight: bold;
 flex-shrink: 0;
+font-size: 18px;
 }
 
 .accent-line {
 height: 3px;
-background: linear-gradient(90deg, #22c55e, #f97316);
-border-radius: 2px;
+background: #22c55e;
+border-radius: 1px;
+width: 60px;
+margin: 0 auto;
 }
 
-@keyframes slideUp {
-animation: slideUp 0.6s ease-out;
-}
-
-@keyframes fadeIn {
-animation: fadeIn 0.8s ease-out;
+.accent-line-orange {
+height: 2px;
+background: #f97316;
+border-radius: 1px;
+width: 100%;
 }
 
 @keyframes slideUp {
 from {
 opacity: 0;
-transform: translateY(30px);
+transform: translateY(20px);
 }
 to {
 opacity: 1;
@@ -140,6 +137,29 @@ animation: slideUp 0.8s ease-out;
 .benefit-item:nth-child(3) { animation-delay: 0.3s; }
 .benefit-item:nth-child(4) { animation-delay: 0.4s; }
 
+.feature-box {
+border-left: 3px solid #22c55e;
+background: rgba(34, 197, 94, 0.05);
+}
+
+.price-highlight {
+background: rgba(34, 197, 94, 0.1);
+border: 1px solid #22c55e;
+}
+
+.icon-circle {
+width: 48px;
+height: 48px;
+background: rgba(34, 197, 94, 0.1);
+border: 2px solid #22c55e;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #22c55e;
+flex-shrink: 0;
+}
+
 </style>
   <style>body { box-sizing: border-box; }</style>
   <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
@@ -150,14 +170,12 @@ animation: slideUp 0.8s ease-out;
   <div class="w-full overflow-auto">
    <section class="py-20 px-6 hero-section">
     <div class="max-w-4xl mx-auto text-center">
-     <div class="accent-line w-16 mx-auto mb-6"></div>
-     <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">OBRIGADO PELA SUA<br><span class="gradient-text">INSCRIÇÃO</span></h1>
-     <p class="text-xl text-gray-300 mb-6 font-medium">Você acaba de dar um passo importante para transformar sua vida</p>
-     <p class="text-lg text-gray-400 mb-6 leading-relaxed">Sua inscrição no Projeto Primeiros 30 foi confirmada com sucesso. Você será capaz de sair do sedentarismo, organizar sua alimentação e começar seu processo de emagrecimento com acompanhamento nutricional profissional.</p>
-     <p class="text-lg text-gray-400 leading-relaxed">Em instantes você receberá no seu e-mail todas as instruções para acessar o desafio completo.</p>
-     <div class="mt-12 p-6 gradient-bg rounded-xl border border-orange-500/30">
-      <p class="text-orange-300 text-lg font-semibold">⚡ Mas antes de você ir, tenho uma oferta especial que pode acelerar seus resultados</p>
-     </div>
+     <h1 class="text-5xl md:text-6xl font-bold mb-4">OBRIGADO PELA SUA<br><span class="green-accent">INSCRIÇÃO</span></h1>
+     <div class="accent-line mb-8"></div>
+     <p class="text-gray-300 text-lg mb-6">Sua inscrição foi confirmada com sucesso.</p>
+     <p class="text-gray-400 mb-6">Você acaba de dar um passo importante para sair do sedentarismo, organizar sua alimentação e começar seu processo de emagrecimento com acompanhamento nutricional.</p>
+     <p class="text-gray-400 mb-8">Em instantes você receberá no seu e-mail todas as instruções para acessar o desafio.</p>
+     <p class="text-orange-accent font-semibold text-lg">Mas antes disso, tenho uma oferta rápida que pode melhorar muito o seu acompanhamento durante o desafio.</p>
     </div>
    </section>
    <section class="py-20 px-6">
@@ -168,127 +186,112 @@ animation: slideUp 0.8s ease-out;
    </section>
    <section class="py-20 px-6">
     <div class="max-w-5xl mx-auto">
-     <div class="accent-line w-20 mx-auto mb-12"></div>
-     <h2 class="text-4xl font-bold text-center mb-12">O erro que muitas pessoas cometem</h2>
+     <h2 class="text-3xl font-bold text-center mb-12">O <span style="color: #ef4444;">erro</span> que muitas pessoas cometem ao acompanhar o emagrecimento</h2>
      <div class="card p-10 rounded-2xl">
-      <p class="text-gray-300 text-lg mb-6 leading-relaxed">A maioria das pessoas avalia sua evolução apenas olhando para o peso na balança.</p>
-      <p class="text-gray-300 text-lg mb-6 leading-relaxed">Mas o peso sozinho não mostra o que realmente está acontecendo no seu corpo.</p>
-      <p class="text-gray-300 text-lg mb-8 leading-relaxed">Durante um processo de emagrecimento podem acontecer várias mudanças ao mesmo tempo:</p>
+      <p class="text-gray-300 mb-6">A maioria das pessoas avalia sua evolução apenas olhando para o peso na balança.</p>
+      <p class="text-gray-300 mb-6">Mas o peso sozinho não mostra o que realmente está acontecendo no seu corpo.</p>
+      <p class="text-gray-300 mb-8">Durante um processo de emagrecimento podem acontecer várias mudanças ao mesmo tempo:</p>
       <div class="space-y-3">
-       <div class="flex items-center gap-4">
-        <div class="check-icon">
-         ✓
+       <div class="feature-box p-4 rounded">
+        <div class="flex items-center gap-3">
+         <span class="check-icon">✓</span> <span class="text-gray-300">Redução de Gordura Corporal</span>
         </div>
-        <p class="text-gray-400 text-lg">Redução de gordura corporal</p>
        </div>
-       <div class="flex items-center gap-4">
-        <div class="check-icon">
-         ✓
+       <div class="feature-box p-4 rounded">
+        <div class="flex items-center gap-3">
+         <span class="check-icon">✓</span> <span class="text-gray-300">Aumento de Massa Muscular</span>
         </div>
-        <p class="text-gray-400 text-lg">Aumento de massa muscular</p>
        </div>
-       <div class="flex items-center gap-4">
-        <div class="check-icon">
-         ✓
+       <div class="feature-box p-4 rounded">
+        <div class="flex items-center gap-3">
+         <span class="check-icon">✓</span> <span class="text-gray-300">Retenção de Líquido</span>
         </div>
-        <p class="text-gray-400 text-lg">Retenção de líquido</p>
        </div>
-       <div class="flex items-center gap-4">
-        <div class="check-icon">
-         ✓
+       <div class="feature-box p-4 rounded">
+        <div class="flex items-center gap-3">
+         <span class="check-icon">✓</span> <span class="text-gray-300">Mudanças na Composição Corporal</span>
         </div>
-        <p class="text-gray-400 text-lg">Mudanças na composição corporal</p>
        </div>
       </div>
-      <p class="text-gray-300 text-lg mt-8 leading-relaxed font-semibold text-orange-300">Por isso acompanhar apenas o peso pode ser enganoso.</p>
+      <p class="text-gray-300 mt-8">Por isso acompanhar apenas o peso pode ser enganoso.</p>
      </div>
     </div>
    </section>
    <section class="py-20 px-6">
     <div class="max-w-5xl mx-auto">
-     <div class="accent-line w-20 mx-auto mb-12"></div>
-     <h2 class="text-4xl font-bold text-center mb-12">Descubra seu percentual de gordura corporal</h2>
+     <h2 class="text-3xl font-bold text-center mb-12">Descubra seu <span class="green-accent">percentual de gordura corporal</span></h2>
      <div class="card p-10 rounded-2xl">
-      <p class="text-gray-300 text-lg mb-6 leading-relaxed">Para acompanhar melhor sua evolução durante o desafio, você pode adicionar uma análise de percentual de gordura corporal — um método profissional que oferece resultados muito mais precisos.</p>
-      <p class="text-gray-300 text-lg mb-6 leading-relaxed">Funciona de forma simples e prática:</p>
-      <div class="space-y-4 mb-8">
-       <div class="flex gap-4">
-        <div class="check-icon">
-         1
-        </div>
-        <p class="text-gray-400 text-lg">Você envia algumas fotos do seu corpo seguindo um padrão simples</p>
-       </div>
-       <div class="flex gap-4">
-        <div class="check-icon">
-         2
-        </div>
-        <p class="text-gray-400 text-lg">Essas imagens são analisadas com o software profissional do WebDiet</p>
-       </div>
-       <div class="flex gap-4">
-        <div class="check-icon">
-         3
-        </div>
-        <p class="text-gray-400 text-lg">Você recebe uma estimativa precisa do seu percentual de gordura corporal</p>
-       </div>
-      </div>
-      <p class="text-gray-300 text-lg leading-relaxed font-semibold">Com isso, você terá um parâmetro inicial real para comparar sua evolução durante todo o desafio.</p>
+      <p class="text-gray-300 mb-6">Para acompanhar melhor sua evolução durante o desafio, você pode adicionar uma análise de percentual de gordura corporal.</p>
+      <p class="text-gray-300 mb-6">Funciona de forma simples.</p>
+      <p class="text-gray-300 mb-6">Você enviará algumas fotos do seu corpo seguindo um padrão que será explicado após a compra.</p>
+      <p class="text-gray-300 mb-6">Essas imagens serão analisadas utilizando o software profissional do WebDiet.</p>
+      <p class="text-gray-300">Com isso você terá uma estimativa do seu percentual de gordura corporal.</p>
      </div>
     </div>
    </section>
-   <section class="py-20 px-6 gradient-bg mx-6 rounded-3xl" style="margin-left: auto; margin-right: auto; max-width: 80rem;">
-    <div class="max-w-5xl mx-auto">
-     <h2 class="text-4xl font-bold text-center mb-16">Por que isso é importante durante o desafio?</h2>
+   <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+     <h2 class="text-3xl font-bold text-center mb-16 green-accent">Por que isso é importante durante o desafio?</h2>
      <div class="grid md:grid-cols-2 gap-8">
-      <div class="benefit-item card p-10 rounded-xl text-center">
-       <p class="text-gray-300 text-lg leading-relaxed">✓ Entender se está perdendo gordura corporal</p>
+      <div class="benefit-item card p-8 rounded-xl">
+       <p>🎯 Entender se está perdendo gordura corporal</p>
       </div>
-      <div class="benefit-item card p-10 rounded-xl text-center">
-       <p class="text-gray-300 text-lg leading-relaxed">✓ Acompanhar mudanças reais no corpo</p>
+      <div class="benefit-item card p-8 rounded-xl">
+       <p>📊 Acompanhar mudanças reais no corpo</p>
       </div>
-      <div class="benefit-item card p-10 rounded-xl text-center">
-       <p class="text-gray-300 text-lg leading-relaxed">✓ Ter um parâmetro inicial para comparar evolução</p>
+      <div class="benefit-item card p-8 rounded-xl">
+       <p>📈 Ter um parâmetro inicial para comparar sua evolução</p>
       </div>
-      <div class="benefit-item card p-10 rounded-xl text-center">
-       <p class="text-gray-300 text-lg leading-relaxed">✓ Avaliar resultados além do peso na balança</p>
+      <div class="benefit-item card p-8 rounded-xl">
+       <p>⚖️ Avaliar resultados além do peso na balança</p>
       </div>
      </div>
     </div>
    </section>
    <section class="py-20 px-6">
     <div class="max-w-5xl mx-auto">
-     <div class="accent-line w-20 mx-auto mb-12"></div>
-     <h2 class="text-4xl font-bold text-center mb-12">O que você recebe</h2>
+     <h2 class="text-3xl font-bold text-center mb-12 green-accent">O que você recebe ao adicionar essa análise</h2>
      <div class="card p-10 rounded-2xl">
       <div class="space-y-4">
        <div class="flex items-start gap-4">
-        <div class="check-icon">
-         ✓
+        <div class="icon-circle">
+         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-green-500"><polyline points="20 6 9 17 4 12"></polyline>
+         </svg>
         </div>
-        <p class="text-gray-300 text-lg">Análise de percentual de gordura através de fotos de alta qualidade</p>
+        <div>
+         <p class="text-gray-300 font-semibold">📸 Análise de Percentual de Gordura Através de Fotos</p>
+         <p class="text-gray-500 text-sm">Método não invasivo e efetivo</p>
+        </div>
        </div>
        <div class="flex items-start gap-4">
-        <div class="check-icon">
-         ✓
+        <div class="icon-circle">
+         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-green-500"><polyline points="20 6 9 17 4 12"></polyline>
+         </svg>
         </div>
-        <p class="text-gray-300 text-lg">Avaliação realizada com o software profissional WebDiet</p>
+        <div>
+         <p class="text-gray-300 font-semibold">💻 Avaliação Realizada com o Software Profissional WebDiet</p>
+         <p class="text-gray-500 text-sm">Tecnologia reconhecida no mercado</p>
+        </div>
        </div>
        <div class="flex items-start gap-4">
-        <div class="check-icon">
-         ✓
+        <div class="icon-circle">
+         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-green-500"><polyline points="20 6 9 17 4 12"></polyline>
+         </svg>
         </div>
-        <p class="text-gray-300 text-lg">Parâmetro inicial de composição corporal documentado</p>
+        <div>
+         <p class="text-gray-300 font-semibold">📋 Parâmetro Inicial de Composição Corporal</p>
+         <p class="text-gray-500 text-sm">Seu ponto de partida para o acompanhamento</p>
+        </div>
        </div>
        <div class="flex items-start gap-4">
-        <div class="check-icon">
-         ✓
+        <div class="icon-circle">
+         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-green-500"><polyline points="20 6 9 17 4 12"></polyline>
+         </svg>
         </div>
-        <p class="text-gray-300 text-lg">Referência para acompanhar sua evolução durante todo o desafio</p>
-       </div>
-       <div class="flex items-start gap-4">
-        <div class="check-icon">
-         ✓
+        <div>
+         <p class="text-gray-300 font-semibold">📊 Referência Para Acompanhar sua Evolução Durante o Desafio</p>
+         <p class="text-gray-500 text-sm">Acompanhe seus resultados de forma precisa</p>
         </div>
-        <p class="text-gray-300 text-lg">Acesso a relatório digital detalhado com resultados</p>
        </div>
       </div>
      </div>
@@ -296,29 +299,19 @@ animation: slideUp 0.8s ease-out;
    </section>
    <section class="py-24 px-6">
     <div class="max-w-4xl mx-auto text-center">
-     <div class="mb-8">
-      <p class="text-lg text-gray-400 mb-4">Oferta especial por tempo limitado</p>
-      <h2 class="text-5xl font-bold mb-4"><span class="gradient-text">R$19,99</span></h2>
-      <p class="text-gray-400 text-lg mb-6">Análise de composição corporal com software profissional</p>
-      <p class="text-gray-500 text-sm">Normalmente uma análise dessa qualidade custaria muito mais caro em uma consulta individual. Mas como você acabou de entrar no desafio, pode adicionar esse complemento por um valor promocional.</p>
-     </div>
-     <div class="space-y-4">
-      <button onclick="handleUpsellClick()" class="cta w-full py-5 px-8 rounded-xl text-lg"> ADICIONAR ANÁLISE DE GORDURA CORPORAL </button> <button onclick="handleSkip()" class="secondary-btn w-full py-4 px-8 rounded-xl text-lg font-semibold"> Não, quero continuar sem essa análise </button>
-     </div>
-     <p class="mt-12 text-sm text-orange-400 animate-fade-in">⏱️ Essa oferta está disponível apenas neste momento, junto com sua inscrição no desafio.</p>
-     <p class="mt-6 text-xs text-gray-500">Ao clicar em "Adicionar Análise", você será redirecionado para finalizar o pagamento.</p>
+     <h2 class="text-4xl font-bold mb-6">Adicione essa análise por apenas <span class="green-accent">R$19,99</span></h2>
+     <div class="accent-line mb-8"></div>
+     <p class="text-gray-400 mb-10">Essa análise normalmente seria feita em uma consulta individual. Mas como você acabou de entrar no desafio, pode adicionar esse complemento por um valor simbólico.</p>
+     <div class="price-highlight p-6 rounded-xl mb-10">
+      <p class="text-gray-300 mb-2">Investimento único</p>
+      <p class="text-3xl font-bold green-accent">R$19,99</p>
+     </div><a href="#" class="cta inline-block text-lg font-bold py-6 px-12 rounded-xl mb-6"> SIM, QUERO DESCOBRIR MEU PERCENTUAL DE GORDURA </a>
+     <p class="text-gray-400 mb-10">ou continue com sua inscrição no desafio</p><a href="#" class="secondary-btn inline-block py-3 px-8 rounded-lg"> Não, quero continuar sem essa análise </a>
+     <p class="mt-12 text-sm text-orange-accent">Essa oferta está disponível apenas neste momento, junto com sua inscrição no desafio.</p>
     </div>
    </section>
   </div>
   <script>
-
-function handleUpsellClick() {
-alert('Redirecionando para pagamento...\n\nSubstituir href="#" pelo link de pagamento do seu gateway (Hotmart, Kiwify, Stripe, etc.)');
-}
-
-function handleSkip() {
-alert('Você escolheu continuar sem a análise.\n\nRedirecionando para o seu email...');
-}
 
 document.addEventListener('DOMContentLoaded', async function() {
 if (window.elementSdk) {
@@ -342,5 +335,5 @@ mapToEditPanelValues
 });
 
 </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dc41c32620935d8',t:'MTc3MzUwMDAzMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dc4351d036d1ac0',t:'MTc3MzUwMTA1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
