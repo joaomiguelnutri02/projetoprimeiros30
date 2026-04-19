@@ -1,427 +1,241 @@
 <!doctype html>
 <html lang="pt-BR">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Obrigado | Projeto Primeiros 30</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/_sdk/element_sdk.js"></script>
-  <style>
-
-html, body {
-height: 100%;
-}
-
-body{
-background: #0a0a0a;
-color: #e5e5e5;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-margin: 0;
-padding: 0;
-}
-
-.green-accent {
-color: #22c55e;
-}
-
-.orange-accent {
-color: #f97316;
-}
-
-.card{
-background: #1a1a1a;
-border: 1px solid #333;
-transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card:hover{
-transform: translateY(-6px);
-border-color: #22c55e;
-box-shadow: 0 20px 40px rgba(34, 197, 94, 0.2);
-}
-
-.cta{
-background: #22c55e;
-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-color: #000;
-font-weight: 700;
-letter-spacing: 0.5px;
-}
-
-.cta:hover{
-background: #16a34a;
-transform: translateY(-2px);
-box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
-}
-
-.cta:active{
-transform: translateY(0);
-}
-
-.secondary-btn {
-background: transparent;
-border: 1px solid #666;
-transition: all 0.3s;
-color: #999;
-}
-
-.secondary-btn:hover {
-background: rgba(34, 197, 94, 0.1);
-border-color: #22c55e;
-color: #22c55e;
-}
-
-.check-icon {
-width: 32px;
-height: 32px;
-background: #22c55e;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-color: #000;
-font-weight: bold;
-flex-shrink: 0;
-font-size: 18px;
-}
-
-.accent-line {
-height: 3px;
-background: #22c55e;
-border-radius: 1px;
-width: 60px;
-margin: 0 auto;
-}
-
-.accent-line-orange {
-height: 2px;
-background: #f97316;
-border-radius: 1px;
-width: 100%;
-}
-
-@keyframes slideUp {
-from {
-opacity: 0;
-transform: translateY(20px);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
-}
-
-@keyframes fadeIn {
-from { opacity: 0; }
-to { opacity: 1; }
-}
-
-.animate-slide-up {
-animation: slideUp 0.6s ease-out;
-}
-
-.animate-fade-in {
-animation: fadeIn 0.8s ease-out;
-}
-
-.hero-section {
-animation: slideUp 0.8s ease-out;
-}
-
-.benefit-item {
-animation: slideUp 0.8s ease-out;
-}
-
-.benefit-item:nth-child(1) { animation-delay: 0.1s; }
-.benefit-item:nth-child(2) { animation-delay: 0.2s; }
-.benefit-item:nth-child(3) { animation-delay: 0.3s; }
-.benefit-item:nth-child(4) { animation-delay: 0.4s; }
-
-.feature-box {
-border-left: 3px solid #22c55e;
-background: rgba(34, 197, 94, 0.05);
-}
-
-.price-highlight {
-background: rgba(34, 197, 94, 0.1);
-border: 1px solid #22c55e;
-}
-
-.icon-circle {
-width: 48px;
-height: 48px;
-background: rgba(34, 197, 94, 0.1);
-border: 2px solid #22c55e;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-color: #22c55e;
-flex-shrink: 0;
-}
-
-@keyframes pulse-glow {
-0%, 100% {
-box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
-}
-50% {
-box-shadow: 0 0 40px rgba(34, 197, 94, 0.8);
-}
-}
-
-@keyframes bounce-gentle {
-0%, 100% {
-transform: translateY(0);
-}
-50% {
-transform: translateY(-4px);
-}
-}
-
-.animate-pulse-glow {
-animation: pulse-glow 3s ease-in-out infinite;
-}
-
-.whatsapp-btn {
-animation: bounce-gentle 2s ease-in-out infinite;
-display: inline-flex !important;
-align-items: center;
-justify-content: center;
-}
-
-</style>
-  <style>body { box-sizing: border-box; }</style>
   <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js"></script>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
- </head>
- <body class="h-full">
+  <style>
+    html, body { height: 100%; }
+
+    body {
+      background: #0a0a0a;
+      color: #e5e5e5;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .green-accent { color: #22c55e; }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #22c55e;
+      box-shadow: 0 20px 40px rgba(34, 197, 94, 0.2);
+    }
+
+    .accent-line {
+      height: 3px;
+      background: #22c55e;
+      border-radius: 1px;
+      width: 60px;
+      margin: 0 auto;
+    }
+
+    .icon-circle {
+      width: 48px;
+      height: 48px;
+      background: rgba(34, 197, 94, 0.1);
+      border: 2px solid #22c55e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #22c55e;
+      flex-shrink: 0;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+      50%       { box-shadow: 0 0 40px rgba(34, 197, 94, 0.8); }
+    }
+
+    @keyframes bounce-gentle {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-4px); }
+    }
+
+    .hero-section { animation: slideUp 0.8s ease-out; }
+
+    .step-item { animation: slideUp 0.8s ease-out both; }
+    .step-item:nth-child(1) { animation-delay: 0.1s; }
+    .step-item:nth-child(2) { animation-delay: 0.2s; }
+    .step-item:nth-child(3) { animation-delay: 0.3s; }
+    .step-item:nth-child(4) { animation-delay: 0.4s; }
+
+    .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+    .whatsapp-btn {
+      animation: bounce-gentle 2s ease-in-out infinite;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-weight: 800;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body class="h-full">
   <div class="w-full overflow-auto">
-   <section class="py-4 px-6 bg-blue-600/20 border-b border-blue-500">
-    <div class="max-w-4xl mx-auto text-center">
-     <p class="text-blue-300 text-sm font-semibold">ℹ️ Importante: O link para entrar no grupo do WhatsApp está ao final desta página</p>
-    </div>
-   </section>
-   <section class="py-20 px-6 hero-section">
-    <div class="max-w-4xl mx-auto">
-     <div class="text-center mb-12">
-      <h1 class="text-5xl md:text-6xl font-bold mb-4">OBRIGADO PELA SUA<br><span class="green-accent">INSCRIÇÃO</span></h1>
-      <div class="accent-line mb-8"></div>
-      <p class="text-gray-300 text-lg mb-4">✅ Sua inscrição foi confirmada com sucesso!</p>
-     </div>
-     <div class="space-y-6">
-      <div class="card p-8 rounded-xl border-l-4" style="border-left-color: #22c55e;">
-       <div class="flex items-start gap-4">
-        <div class="icon-circle" style="background: rgba(34, 197, 94, 0.2); border: 2px solid #22c55e;">
-         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
-          <polyline points="20 6 9 17 4 12"></polyline>
-         </svg>
-        </div>
-        <div class="text-left">
-         <p class="text-gray-200 font-semibold mb-2">Você deu um passo importante</p>
-         <p class="text-gray-400">Saiu do sedentarismo e está começando seu processo de emagrecimento com acompanhamento nutricional profissional.</p>
-        </div>
-       </div>
+
+    <!-- Barra de aviso -->
+    <section class="py-4 px-6 bg-blue-600/20 border-b border-blue-500">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-blue-300 text-sm font-semibold">ℹ️ Importante: O link para entrar no grupo do WhatsApp está ao final desta página</p>
       </div>
-      <div class="card p-8 rounded-xl border-l-4" style="border-left-color: #22c55e;">
-       <div class="flex items-start gap-4">
-        <div class="icon-circle" style="background: rgba(34, 197, 94, 0.2); border: 2px solid #22c55e;"><span style="color: #22c55e; font-size: 20px;">🚀</span>
+    </section>
+
+    <!-- Hero -->
+    <section class="py-20 px-6 hero-section">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6" style="background: rgba(34,197,94,0.15); border: 2px solid #22c55e;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h1 class="text-5xl md:text-6xl font-bold mb-4">
+            OBRIGADO PELA SUA<br><span class="green-accent">INSCRIÇÃO</span>
+          </h1>
+          <div class="accent-line mb-8"></div>
+          <p class="text-gray-300 text-lg">✅ Sua inscrição foi confirmada com sucesso!</p>
         </div>
-        <div class="text-left">
-         <p class="text-gray-200 font-semibold mb-2">Próximos passos</p>
-         <p class="text-gray-400">Organize sua alimentação, siga o acompanhamento e prepare-se para resultados incríveis durante o desafio.</p>
+
+        <!-- Cards de confirmação -->
+        <div class="space-y-6">
+          <div class="card p-8 rounded-xl border-l-4" style="border-left-color: #22c55e;">
+            <div class="flex items-start gap-4">
+              <div class="icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="text-left">
+                <p class="text-gray-200 font-semibold mb-2">Você deu um passo importante</p>
+                <p class="text-gray-400">Saiu do sedentarismo e está começando seu processo de emagrecimento com acompanhamento nutricional profissional.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-8 rounded-xl border-l-4" style="border-left-color: #22c55e;">
+            <div class="flex items-start gap-4">
+              <div class="icon-circle">
+                <span style="color: #22c55e; font-size: 20px;">🚀</span>
+              </div>
+              <div class="text-left">
+                <p class="text-gray-200 font-semibold mb-2">O que esperar dos próximos 30 dias</p>
+                <p class="text-gray-400">Organize sua alimentação, siga o acompanhamento e prepare-se para resultados incríveis durante o desafio.</p>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
       </div>
-     </div>
-     <div class="mt-12 card p-8 rounded-xl border-l-4" style="border-left-color: #22c55e;">
-      <div class="flex items-start gap-4">
-       <div class="icon-circle" style="background: rgba(34, 197, 94, 0.2); border: 2px solid #22c55e;">
-        <span style="color: #22c55e; font-size: 20px;">📱</span>
-       </div>
-       <div class="text-left">
-        <p class="text-gray-200 font-semibold mb-2">Para participar do desafio</p>
-        <p class="text-gray-400">Você <strong>PRECISA</strong> entrar no grupo do WhatsApp para receber todas as orientações, suporte diário e conectar com outras pessoas na mesma jornada. <strong>O link está ao final desta página.</strong></p>
-       </div>
+    </section>
+
+    <!-- Próximos passos -->
+    <section class="py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-3">Seus <span class="green-accent">próximos passos</span></h2>
+        <p class="text-gray-400 text-center mb-12">Siga essa sequência para começar com tudo</p>
+
+        <div class="space-y-5">
+          <div class="step-item card p-6 rounded-xl flex items-start gap-5">
+            <div class="step-number">1</div>
+            <div>
+              <p class="text-gray-200 font-semibold mb-1">Entre no grupo do WhatsApp</p>
+              <p class="text-gray-400 text-sm">O link está ao final desta página. É por lá que você receberá todas as orientações, suporte diário e conteúdos do programa.</p>
+            </div>
+          </div>
+
+          <div class="step-item card p-6 rounded-xl flex items-start gap-5">
+            <div class="step-number">2</div>
+            <div>
+              <p class="text-gray-200 font-semibold mb-1">Acesse sua área de membros na Kiwify</p>
+              <p class="text-gray-400 text-sm">Você receberá um e-mail com o link de acesso. Lá estarão os materiais iniciais do programa.</p>
+            </div>
+          </div>
+
+          <div class="step-item card p-6 rounded-xl flex items-start gap-5">
+            <div class="step-number">3</div>
+            <div>
+              <p class="text-gray-200 font-semibold mb-1">Aguarde o início oficial — 1º de junho</p>
+              <p class="text-gray-400 text-sm">No Dia 1 você receberá todas as instruções: envio de peso, fotos e medidas para começar o acompanhamento.</p>
+            </div>
+          </div>
+
+          <div class="step-item card p-6 rounded-xl flex items-start gap-5">
+            <div class="step-number">4</div>
+            <div>
+              <p class="text-gray-200 font-semibold mb-1">Configure o WebDiet e o Gymrats</p>
+              <p class="text-gray-400 text-sm">As instruções de como criar sua conta e usar os aplicativos serão enviadas no grupo logo após sua entrada.</p>
+            </div>
+          </div>
+        </div>
       </div>
-     </div>
-     <div class="mt-16 pt-8 border-t border-gray-700"></div>
-     <div class="mt-12 bg-red-600/10 border-l-4 border-red-500 rounded-xl p-8">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">⚠️ ESPERE!</h2>
-      <p class="text-xl text-gray-200">Antes de começar o desafio,<br>
-        tenho algo importante para você.</p>
-     </div>
-    </div>
-   </section>
-   <section class="py-20 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-     <h2 class="text-4xl font-bold mb-6">Espere um momento…</h2>
-     <p class="text-xl text-gray-400 leading-relaxed">Existe uma ferramenta simples que pode revolucionar a forma como você acompanha seus resultados durante o desafio.</p>
-    </div>
-   </section>
-   <section class="py-20 px-6">
-    <div class="max-w-5xl mx-auto">
-     <h2 class="text-3xl font-bold text-center mb-12">O <span style="color: #ef4444;">erro</span> que muitas pessoas cometem ao acompanhar o emagrecimento</h2>
-     <div class="card p-10 rounded-2xl">
-      <p class="text-gray-300 mb-6">A maioria das pessoas avalia sua evolução apenas olhando para o peso na balança.</p>
-      <p class="text-gray-300 mb-6">Mas o peso sozinho não mostra o que realmente está acontecendo no seu corpo.</p>
-      <p class="text-gray-300 mb-8">Durante um processo de emagrecimento podem acontecer várias mudanças ao mesmo tempo:</p>
-      <div class="space-y-3">
-       <div class="feature-box p-4 rounded">
-        <div class="flex items-center gap-3"><span class="check-icon">✓</span> <span class="text-gray-300">Redução de Gordura Corporal</span>
+    </section>
+
+    <!-- CTA WhatsApp -->
+    <section class="py-20 px-6 pb-24">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="bg-gradient-to-br from-green-500/20 to-green-600/20 border-2 border-green-500 rounded-2xl p-10 animate-pulse-glow">
+          <p class="text-white text-sm font-semibold mb-4 uppercase tracking-wide">⚠️ AÇÃO IMPORTANTE</p>
+          <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Você PRECISA entrar no grupo do WhatsApp</h3>
+          <p class="text-gray-200 mb-8 text-lg">Lá você receberá todas as orientações do desafio, suporte diário e conectará com outras pessoas na mesma jornada!</p>
+
+          <a
+            href="https://wa.me/SEULINKAQUI"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp-btn inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 text-white text-lg font-bold py-5 px-10 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-green-500/50 hover:scale-105 active:scale-95"
+          >
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2.5 22l6.26-2.11C10.04 21.42 10.97 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.73-.36-3.88-.97l-.28-.15-2.89.97.99-2.79-.19-.30C4.5 14.76 4 13.43 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.64-12.67c-.07-.11-.27-.18-.56-.31-.29-.12-.85-.42-1-.47-.15-.05-.26-.07-.37.07-.12.13-.43.54-.53.65-.09.11-.19.13-.48.04-.29-.09-1.23-.45-2.34-1.43-.87-.77-1.46-1.71-1.63-2-.17-.29 0-.45.13-.59.12-.13.27-.33.4-.5.13-.16.17-.28.26-.46.08-.17.04-.32-.02-.45-.07-.13-.37-1-.5-1.37-.13-.35-.27-.3-.37-.3-.1 0-.21 0-.33 0-.11 0-.3.04-.46.24-.15.2-.58.57-.58 1.39 0 .82.59 1.61.67 1.73.08.12 1.27 1.95 3.07 2.75.43.19.76.3.98.38.43.14.82.12 1.13.07.34-.05 1.04-.43 1.18-.84.15-.4.15-.75.1-.82z"/>
+            </svg>
+            ENTRAR NO GRUPO DO WHATSAPP
+          </a>
+
+          <p class="text-gray-300 text-sm mt-6">🔔 Clique agora para não perder nenhuma orientação!</p>
         </div>
-       </div>
-       <div class="feature-box p-4 rounded">
-        <div class="flex items-center gap-3"><span class="check-icon">✓</span> <span class="text-gray-300">Aumento de Massa Muscular</span>
-        </div>
-       </div>
-       <div class="feature-box p-4 rounded">
-        <div class="flex items-center gap-3"><span class="check-icon">✓</span> <span class="text-gray-300">Retenção de Líquido</span>
-        </div>
-       </div>
-       <div class="feature-box p-4 rounded">
-        <div class="flex items-center gap-3"><span class="check-icon">✓</span> <span class="text-gray-300">Mudanças na Composição Corporal</span>
-        </div>
-       </div>
       </div>
-      <p class="text-gray-300 mt-8">Por isso acompanhar apenas o peso pode ser enganoso.</p>
-     </div>
-    </div>
-   </section>
-   <section class="py-20 px-6">
-    <div class="max-w-5xl mx-auto">
-     <h2 class="text-3xl font-bold text-center mb-12">Descubra seu <span class="green-accent">percentual de gordura corporal</span></h2>
-     <div class="card p-10 rounded-2xl">
-      <p class="text-gray-300 mb-6">Para acompanhar melhor sua evolução durante o desafio, você pode adicionar uma análise de percentual de gordura corporal.</p>
-      <p class="text-gray-300 mb-6">Funciona de forma simples.</p>
-      <p class="text-gray-300 mb-6">Você enviará algumas fotos do seu corpo seguindo um padrão que será explicado após a compra.</p>
-      <p class="text-gray-300 mb-6">Essas imagens serão analisadas utilizando o software profissional do WebDiet.</p>
-      <p class="text-gray-300">Com isso você terá uma estimativa do seu percentual de gordura corporal.</p>
-     </div>
-    </div>
-   </section>
-   <section class="py-20 px-6">
-    <div class="max-w-6xl mx-auto">
-     <h2 class="text-3xl font-bold text-center mb-16 green-accent">Por que isso é importante durante o desafio?</h2>
-     <div class="grid md:grid-cols-2 gap-8">
-      <div class="benefit-item card p-8 rounded-xl">
-       <p>🎯 Entender se está perdendo gordura corporal</p>
-      </div>
-      <div class="benefit-item card p-8 rounded-xl">
-       <p>📊 Acompanhar mudanças reais no corpo</p>
-      </div>
-      <div class="benefit-item card p-8 rounded-xl">
-       <p>📈 Ter um parâmetro inicial para comparar sua evolução</p>
-      </div>
-      <div class="benefit-item card p-8 rounded-xl">
-       <p>⚖️ Avaliar resultados além do peso na balança</p>
-      </div>
-     </div>
-    </div>
-   </section>
-   <section class="py-20 px-6">
-    <div class="max-w-5xl mx-auto">
-     <h2 class="text-3xl font-bold text-center mb-12 green-accent">O que você recebe ao adicionar essa análise</h2>
-     <div class="card p-10 rounded-2xl">
-      <div class="space-y-4">
-       <div class="flex items-start gap-4">
-        <div class="icon-circle">
-         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-green-500">
-          <polyline points="20 6 9 17 4 12"></polyline>
-         </svg>
-        </div>
-        <div>
-         <p class="text-gray-300 font-semibold">📸 Análise de Percentual de Gordura Através de Fotos</p>
-         <p class="text-gray-500 text-sm">Método não invasivo e efetivo</p>
-        </div>
-       </div>
-       <div class="flex items-start gap-4">
-        <div class="icon-circle">
-         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-green-500">
-          <polyline points="20 6 9 17 4 12"></polyline>
-         </svg>
-        </div>
-        <div>
-         <p class="text-gray-300 font-semibold">💻 Avaliação Realizada com o Software Profissional WebDiet</p>
-         <p class="text-gray-500 text-sm">Tecnologia reconhecida no mercado</p>
-        </div>
-       </div>
-       <div class="flex items-start gap-4">
-        <div class="icon-circle">
-         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-green-500">
-          <polyline points="20 6 9 17 4 12"></polyline>
-         </svg>
-        </div>
-        <div>
-         <p class="text-gray-300 font-semibold">📋 Parâmetro Inicial de Composição Corporal</p>
-         <p class="text-gray-500 text-sm">Seu ponto de partida para o acompanhamento</p>
-        </div>
-       </div>
-       <div class="flex items-start gap-4">
-        <div class="icon-circle">
-         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-green-500">
-          <polyline points="20 6 9 17 4 12"></polyline>
-         </svg>
-        </div>
-        <div>
-         <p class="text-gray-300 font-semibold">📊 Referência Para Acompanhar sua Evolução Durante o Desafio</p>
-         <p class="text-gray-500 text-sm">Acompanhe seus resultados de forma precisa</p>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-   <section class="py-24 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-     <h2 class="text-4xl font-bold mb-6">Adicione essa análise por apenas <span class="green-accent">R$19,99</span></h2>
-     <div class="accent-line mb-8"></div>
-     <p class="text-gray-400 mb-10">Essa análise normalmente seria feita em uma consulta individual. Mas como você acabou de entrar no desafio, pode adicionar esse complemento por um valor simbólico.</p>
-     <div class="price-highlight p-6 rounded-xl mb-10">
-      <p class="text-gray-300 mb-2">Investimento único</p>
-      <p class="text-3xl font-bold green-accent">R$19,99</p>
-     </div><a href="#" class="cta inline-block text-lg font-bold py-6 px-12 rounded-xl mb-6"> SIM, QUERO DESCOBRIR MEU PERCENTUAL DE GORDURA </a>
-     <p class="text-gray-400 mb-10">ou continue com sua inscrição no desafio</p><a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="secondary-btn inline-block py-3 px-8 rounded-lg"> Não, quero continuar sem essa análise </a>
-     <p class="mt-12 text-sm text-orange-accent">Essa oferta está disponível apenas neste momento, junto com sua inscrição no desafio.</p>
-    </div>
-   </section>
-   <section class="py-20 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-     <div class="bg-gradient-to-br from-green-500/20 to-green-600/20 border-2 border-green-500 rounded-2xl p-8 animate-pulse-glow">
-      <p class="text-white text-sm font-semibold mb-4 uppercase tracking-wide">⚠️ AÇÃO IMPORTANTE</p>
-      <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Você PRECISA entrar no grupo do WhatsApp</h3>
-      <p class="text-gray-200 mb-6 text-lg">Lá você receberá todas as orientações do desafio, suporte diário e conectará com outras pessoas na mesma jornada!</p><a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="whatsapp-btn inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 text-white text-lg font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-green-500/50 hover:scale-105 active:scale-95">
-       <svg width="32" height="32" viewbox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2.5 22l6.26-2.11C10.04 21.42 10.97 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.73-.36-3.88-.97l-.28-.15-2.89.97.99-2.79-.19-.30C4.5 14.76 4 13.43 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.64-12.67c-.07-.11-.27-.18-.56-.31-.29-.12-.85-.42-1-.47-.15-.05-.26-.07-.37.07-.12.13-.43.54-.53.65-.09.11-.19.13-.48.04-.29-.09-1.23-.45-2.34-1.43-.87-.77-1.46-1.71-1.63-2-.17-.29 0-.45.13-.59.12-.13.27-.33.4-.5.13-.16.17-.28.26-.46.08-.17.04-.32-.02-.45-.07-.13-.37-1-.5-1.37-.13-.35-.27-.3-.37-.3-.1 0-.21 0-.33 0-.11 0-.3.04-.46.24-.15.2-.58.57-.58 1.39 0 .82.59 1.61.67 1.73.08.12 1.27 1.95 3.07 2.75.43.19.76.3.98.38.43.14.82.12 1.13.07.34-.05 1.04-.43 1.18-.84.15-.4.15-.75.1-.82z" />
-       </svg> ENTRAR NO GRUPO DO WHATSAPP </a>
-      <p class="text-gray-300 text-sm mt-6">🔔 Clique agora para não perder nenhuma orientação!</p>
-     </div>
-    </div>
-   </section>
+    </section>
+
   </div>
+
   <script>
-
-document.addEventListener('DOMContentLoaded', async function() {
-if (window.elementSdk) {
-const defaultConfig = {};
-const onConfigChange = async () => {};
-const mapToCapabilities = () => ({
-recolorables: [],
-borderables: [],
-fontEditable: undefined,
-fontSizeable: undefined
-});
-const mapToEditPanelValues = () => new Map();
-
-window.elementSdk.init({
-defaultConfig,
-onConfigChange,
-mapToCapabilities,
-mapToEditPanelValues
-});
-}
-});
-
-</script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dd86dcb26dc0ed6',t:'MTc3MzcxMzA4Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    document.addEventListener('DOMContentLoaded', async function () {
+      if (window.elementSdk) {
+        const defaultConfig = {};
+        const onConfigChange = async () => {};
+        const mapToCapabilities = () => ({ recolorables: [], borderables: [], fontEditable: undefined, fontSizeable: undefined });
+        const mapToEditPanelValues = () => new Map();
+        window.elementSdk.init({ defaultConfig, onConfigChange, mapToCapabilities, mapToEditPanelValues });
+      }
+    });
+  </script>
+</body>
 </html>
